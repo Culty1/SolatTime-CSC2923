@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SolatTime - Analytics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="analytics">
+<header>
+  <div class="logo">☪ SolatTime</div>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Dashboard</a>
+    <a href="planner.html">Activity Planner</a>
+    <a class="active" href="analytics.html">Analytics</a>
+  </nav>
+</header>
+<main>
+  <h1>Islamic Event Countdown</h1>
+  <section class="card">
+    <h2>Days Until an Event</h2>
+    <label>Islamic Event
+      <select id="targetEvent"></select>
+    </label>
+    <div class="stat-grid">
+      <div class="stat"><span>Days Remaining</span><h3 id="daysRemaining">--</h3></div>
+      <div class="stat"><span>Weeks &amp; Days</span><h3 id="weeksRemaining">--</h3></div>
+      <div class="stat"><span>Event Date</span><h3 id="targetDate">--</h3></div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Days Between Islamic Events</h2>
+    <div class="calculator">
+      <label>From
+        <select id="eventFrom"></select>
+      </label>
+      <label>To
+        <select id="eventTo"></select>
+      </label>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><span>Days Between</span><h3 id="intervalDays">--</h3></div>
+      <div class="stat"><span>Next Islamic Event</span><h3 id="nextEvent">--</h3></div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Prayer Time Interval</h2>
+    <div class="calculator">
+      <label>From Prayer
+        <select id="prayerFrom">
+          <option value="fajr">Subuh</option><option value="syuruk">Syuruk</option><option value="dhuhr">Zohor</option><option value="asr">Asar</option><option value="maghrib">Maghrib</option><option value="isha">Isyak</option>
+        </select>
+      </label>
+      <label>To Prayer
+        <select id="prayerTo">
+          <option value="fajr">Subuh</option><option value="syuruk">Syuruk</option><option value="dhuhr" selected>Zohor</option><option value="asr">Asar</option><option value="maghrib">Maghrib</option><option value="isha">Isyak</option>
+        </select>
+      </label>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><span>Time Between Prayers</span><h3 id="prayerInterval">--</h3></div>
+      <div class="stat"><span>Time Until Next Prayer</span><h3 id="untilNextPrayer">--</h3></div>
+      <div class="stat"><span>Next Prayer</span><h3 id="nextPrayerLabel">--</h3></div>
+    </div>
+    <p id="analyticsStatus" class="status" role="status"></p>
+  </section>
+  <section class="card events">
+    <h2>Upcoming Islamic Events</h2>
+    <div id="analyticsEventList"></div>
+    <p class="status">Islamic dates are estimates until confirmed by Malaysian authorities.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
