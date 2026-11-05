@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SolatTime</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+
+<header>
+  <div class="logo">☪ SolatTime</div>
+  <nav>
+    <a class="active" href="index.html">Dashboard</a>
+    <a href="planner.html">Activity Planner</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+</header>
+
+<main>
+  <div class="heading">
+    <h1>Prayer Times</h1>
+    <div id="clock">--:--:--</div>
+  </div>
+
+  <section class="card location">
+    <label>State
+      <select id="state"></select>
+    </label>
+
+    <label>Area
+      <select id="zone"></select>
+    </label>
+
+    <button id="refresh">Refresh</button>
+  </section>
+
+  <p id="status" class="status"></p>
+
+  <section class="hero">
+    <div>Next Prayer</div>
+    <h2 id="nextName">--</h2>
+    <div class="countdown" id="remaining">--:--:--</div>
+  </section>
+
+  <h2>Today's Prayer Times</h2>
+
+  <section class="prayer-grid">
+    <article class="card prayer">
+      <h3>Subuh</h3>
+      <p id="t-fajr">--:--</p>
+    </article>
+    <article class="card prayer">
+      <h3>Syuruk</h3>
+      <p id="t-syuruk">--:--</p>
+    </article>
+    <article class="card prayer">
+      <h3>Zohor</h3>
+      <p id="t-dhuhr">--:--</p>
+    </article>
+    <article class="card prayer">
+      <h3>Asar</h3>
+      <p id="t-asr">--:--</p>
+    </article>
+    <article class="card prayer">
+      <h3>Maghrib</h3>
+      <p id="t-maghrib">--:--</p>
+    </article>
+    <article class="card prayer">
+      <h3>Isyak</h3>
+      <p id="t-isha">--:--</p>
+    </article>
+  </section>
+
+  <section class="card guidance">
+    <div class="section-heading">
+      <h2>Daily Guidance</h2>
+      <button id="nextTip">Next Tip</button>
+    </div>
+
+    <h3 id="tipTitle"></h3>
+    <p id="tipText"></p>
+
+    <div class="recommendation" id="suggestion"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
