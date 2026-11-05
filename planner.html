@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SolatTime - Activity Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="planner">
+<header>
+  <div class="logo">☪ SolatTime</div>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Dashboard</a>
+    <a class="active" href="planner.html">Activity Planner</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+</header>
+<main>
+  <h1>Activity Planner</h1>
+  <div class="two-columns">
+    <section class="card">
+      <h2 id="formHeading">Add Activity</h2>
+      <form id="activityForm">
+        <label>Activity Name
+          <input id="activityTitle" type="text" maxlength="80" required placeholder="e.g. Read Quran">
+        </label>
+        <label>Date
+          <input id="activityDate" type="date" required>
+        </label>
+        <label>Duration (minutes)
+          <input id="activityMinutes" type="number" value="15" min="5" max="180" required>
+        </label>
+        <label>Category
+          <select id="activityCategory">
+            <option>Quran</option><option>Zikir</option><option>Prayer</option><option>Learning</option><option>Other</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button id="saveButton" type="submit">Add activity</button>
+          <button id="cancelButton" type="button" class="outline">Cancel</button>
+        </div>
+      </form>
+      <p id="plannerStatus" class="status" role="status"></p>
+    </section>
+    <section class="card">
+      <h2>My Activities</h2>
+      <div id="activityList"></div>
+    </section>
+  </div>
+  <section class="card events">
+    <div class="section-heading">
+      <h2>Upcoming Islamic Events</h2>
+      <span class="subtle">Estimated dates</span>
+    </div>
+    <p id="eventStatus" class="status" role="status"></p>
+    <div id="eventList"></div>
+    <p class="status">Dates are calculated estimates. Malaysian official announcements may differ.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
